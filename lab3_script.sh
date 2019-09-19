@@ -12,8 +12,8 @@ read expression
 grep -c  $expression $filename # 
 echo "Number of emails: "
 grep -c -P '[A-Za-z0-9]+@[A-Za-z0-9]+\.[A-Za-z0-9]' regex_practice.txt # Returns number of email addresses in the practice file
-echo "Number of phone numbers: "
-grep -c -P '(303)?\-[0-9]{3}?\-[0-9]{4}' regex_practice.txt # Returns total number of phone numbers in the practice file
+echo "List of phone numbers: "
+grep -o -P '^(303)?\-[0-9]{3}?\-[0-9]{4}' regex_practice.txt # Returns total number of phone numbers in the practice file
 
 # Output emails to file
 grep -P '[A-Za-z0-9]+@geocities.com' regex_practice.txt >> email_results.txt
